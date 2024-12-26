@@ -8,7 +8,7 @@ export const socialMedias = [
       className: " text-white bg-blue-600 rounded-full p-2 "
     },
     {
-      link: "https://www.facebook.com",
+      link: "https://www.github.com",
       icon: <FaFacebookF className="size-8 md:size-8 xl:size-10" />,
       className: " text-white bg-blue-500 rounded-full p-2 "
     },

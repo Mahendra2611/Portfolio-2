@@ -1,70 +1,97 @@
+"use client"
+import { useRouter } from 'next/navigation'; 
 
 const Navbar = () => {
+  const router = useRouter();
+
+  
+  const handleNavigation = (path) => {
+    router.push(path); 
+  };
+
   return (
-    <div className="flex items-center justify-around bg-blue-500 w-full   h-10 rounded-lg ">
-      <button className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out">
+    <div className="flex items-center justify-around bg-blue-500 w-full h-14 rounded-lg">
+      <button
+        className="flex items-center justify-center w-10 h-10  rounded-full text-white bg-transparent "
+        onClick={() => handleNavigation('/')}
+      >
+        {/* Home Icon */}
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      </button>
+
+      <button
+        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        onClick={() => handleNavigation('/education')}
+      >
+        {/* Education Icon */}
         <svg
           className="text-white"
           stroke="currentColor"
           fill="currentColor"
           strokeWidth={0}
           viewBox="0 0 1024 1024"
-          height="1em"
-          width="1em"
+         height="30px"
+          width="50px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z" />
+          <path d="M809.6 313.4l-358.4-108.4-358.4 108.4v208.4l358.4 108.4 358.4-108.4v-208.4zM512 527.8l-290.4-85.5 290.4-85.4 290.4 85.4-290.4 85.5z" />
         </svg>
       </button>
-      <button className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out">
-        <svg
-          className="text-white"
-          stroke="currentColor"
-          fill="none"
-          strokeWidth={2}
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
-      </button>
-      <button className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out">
+
+      <button
+        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        onClick={() => handleNavigation('/skills')}
+      >
+        {/* Skills Icon */}
         <svg
           className="text-white"
           stroke="currentColor"
           fill="currentColor"
           strokeWidth={0}
           viewBox="0 0 24 24"
-          height="1em"
-          width="1em"
+         height="30px"
+          width="50px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z" />
+          <path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
         </svg>
       </button>
-      <button className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out">
+
+      <button
+        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        onClick={() => handleNavigation('/projects')}
+      >
+        {/* Projects Icon */}
         <svg
           className="text-white"
           stroke="currentColor"
-          fill="none"
-          strokeWidth={2}
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
+          fill="currentColor"
+          strokeWidth={0}
+          viewBox="0 0 1024 1024"
+        height="30px"
+          width="50px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx={9} cy={21} r={1} />
-          <circle cx={20} cy={21} r={1} />
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          <path d="M238.7 296h546.7v50H238.7zM238.7 408.4h546.7v50H238.7zM238.7 520.8h546.7v50H238.7zM238.7 633.2h546.7v50H238.7z" />
+        </svg>
+      </button>
+
+      <button
+        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        onClick={() => handleNavigation('/contact')}
+      >
+        {/* Contact Icon */}
+        <svg
+          className="text-white"
+          stroke="currentColor"
+          fill="currentColor"
+          strokeWidth={0}
+          viewBox="0 0 24 24"
+         height="30px"
+          width="50px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M2 12h20m-4 4h4m-4-8h4M3 5h4m-4 14h4" />
         </svg>
       </button>
     </div>
