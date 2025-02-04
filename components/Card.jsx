@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Hat from "../assets/hat.jpg";
 
 const Card = ({ year, degree, collage }) => {
     return (

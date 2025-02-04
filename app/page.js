@@ -1,12 +1,12 @@
 import Image from "next/image";
-import img from "../assets/profile_pic.jpg"
+
 import SocialMedia from "@/components/SocialMedia";
 const Card = () => {
   return (
     <div className="mb-16">
       <div className="relative flex flex-col gap-3 p-4 w-full  bg-zinc-800 ">
         <div className="relative z-5 w-full h-52 bg-purple-800 rounded-lg overflow-hidden cursor-pointer">
-          <Image src={img} className="object-bottom w-full h-full" />
+          <Image src={"/assets/profile_pic.jpg"} width={300} height={200} className="w-full" />
         </div>
         <div className="w-full text-center overflow-clip text-lg font-semibold text-gray-300 capitalize whitespace-nowrap overflow-ellipsis">
           <span >Mahendra Pratap Verma</span>
