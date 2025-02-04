@@ -1,12 +1,18 @@
+"use client"
 import React from 'react';
-
+import { useRouter } from 'next/navigation';
 const Button = () => {
+  const router = useRouter();
+  const handleNavigation = (path)=>{
+    router.push(path)
+  }
   return (
-    <div className="flex justify-center pt-10">
-      <ul className="flex list-none space-x-4">
+    <div className="flex justify-center  pt-10">
+      <ul className="flex list-none space-x-4 sm:space-x-14">
 
         <li className="relative group">
          
+          <button onClick={()=>handleNavigation("https://x.com/mpv_34")}>
           <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
             {/* Twitter Icon (add the actual icon here) */}
             <svg height="1.8em" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" className="twitter">
@@ -15,10 +21,11 @@ const Button = () => {
            
            
           </div>
+          </button>
         </li>
 
         <li className="relative group">
-          
+        <button onClick={()=>handleNavigation("https://www.instagram.com/mahendra_123.p")}>
           <div className="w-12 h-12  rounded-full flex items-center justify-center shadow-lg cursor-pointer bg-pink-500 text-white transition-colors duration-300">
             {/* Instagram Icon (add the actual icon here) */}
             <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
@@ -26,23 +33,28 @@ const Button = () => {
           </svg>
            
           </div>
+          </button>
         </li>
         <li className="relative group">
+        <button onClick={()=>handleNavigation("https://github.com/Mahendra2611")}>
   <div className="w-12 h-12  rounded-full flex items-center justify-center shadow-lg cursor-pointer bg-[#211F1F] text-white transition-colors duration-300">
     {/* GitHub Icon */}
     <svg height="1.8em" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="github">
       <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.207 11.394.6.11.823-.26.823-.577 0-.285-.01-1.043-.015-2.047-3.338.727-4.036-1.607-4.036-1.607-.548-1.392-1.337-1.764-1.337-1.764-.985-.67.075-.657.075-.657 1.09.076 1.664 1.118 1.664 1.118 1.015 1.732 2.656 1.23 3.3.94.099-.734.396-1.23.722-1.514-2.67-.303-5.468-1.334-5.468-5.934 0-1.31.467-2.379 1.235-3.22-.124-.302-.535-1.528.105-3.181 0 0 1.008-.323 3.293 1.238A11.47 11.47 0 0 1 12 4.3c1.02 0 2.037.138 3.003.41 2.281-1.562 3.288-1.238 3.288-1.238.64 1.653.229 2.879.105 3.181.77.841 1.235 1.91 1.235 3.22 0 4.609-2.799 5.623-5.475 5.917.406.35.769 1.041.769 2.101 0 1.522-.015 2.739-.015 3.113 0 .318.223.691.827.578C20.563 21.8 24 17.303 24 12c0-6.627-5.373-12-12-12z"/>
     </svg>
   </div>
+  </button>
 </li>
 
 <li className="relative group">
+<button onClick={()=>handleNavigation("https://www.linkedin.com/in/mahendra-pratap-verma-559b81257")}>
   <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg cursor-pointer bg-[#0077B5] text-white transition-colors duration-300">
     {/* LinkedIn Icon */}
     <svg height="1.8em" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="linkedin">
       <path d="M4.98 3C3.93 3 3 3.93 3 4.98v14.04C3 20.07 3.93 21 4.98 21h14.04c1.05 0 1.98-.93 1.98-1.98V4.98C21 3.93 20.07 3 19.02 3H4.98zM9.17 16H6.65v-7h2.52v7zm-1.26-8.46c-.8 0-1.45-.68-1.45-1.5 0-.83.65-1.5 1.45-1.5s1.45.67 1.45 1.5c0 .82-.65 1.5-1.45 1.5zm10.46 8.46h-2.52v-3.74c0-.89-.32-1.5-.93-1.5-.57 0-.93.39-.93 1.15v3.91h-2.52v-7h2.52v1h.03c.35-.58 1.03-1.27 2.09-1.27 1.54 0 2.7.99 2.7 3.12v3.15z"/>
     </svg>
   </div>
+  </button>
 </li>
 
 

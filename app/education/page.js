@@ -2,7 +2,7 @@ import React from 'react'
 import Education from '@/components/Education'
 const page = () => {
   return (
-    <div>
+    <div className='pb-20'>
       <Education/>
     </div>
   )

@@ -13,12 +13,12 @@ const ProjectCard = ({ name, imgLink, lang, githubLink, websiteLink }) => {
   };
 
   return (
-    <div className="p-4 my-4 mx-2 border border-gray-700 rounded-lg">
+    <div className="p-4 my-4 flex flex-col items-center mx-2 mx-w-[400px] border border-gray-700 rounded-lg">
       {/* Project Image */}
       <Image src={imgLink} alt={name} width={300} height={200} className="w-full" />
       
       {/* Project Name */}
-      <h2 className="text-lg text-white font-semibold mt-2">{name}</h2>
+      <h2 className=" text-lime-500 text-2xl font-semibold mt-2">{name}</h2>
 
       {/* Languages Used */}
       <ul className="flex flex-wrap gap-2 mt-2">

@@ -8,7 +8,14 @@ module.exports = {
   theme: {
    
     extend: {
-     
+      fontFamily: {
+        bonaNovaSC: ["'Bona Nova SC'", "serif"],
+        fredericka: ["'Fredericka the Great'", "cursive"],
+        lacquer: ["'Lacquer'", "cursive"],
+        londrina: ["'Londrina Sketch'", "cursive"],
+        montserrat: ["'Montserrat'", "sans-serif"],
+        rubikWetPaint: ["'Rubik Wet Paint'", "cursive"],
+      },
       
     },
   },
