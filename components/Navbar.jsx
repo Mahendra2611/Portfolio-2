@@ -1,18 +1,18 @@
 "use client"
-import { useRouter } from 'next/navigation'; 
+import { useRouter,usePathname } from 'next/navigation'; 
 
 const Navbar = () => {
   const router = useRouter();
-
-  
+  const path = usePathname();
+  console.log(path)
   const handleNavigation = (path) => {
     router.push(path); 
   };
 
   return (
-    <div className="flex items-center justify-around bg-blue-500 w-full h-14 rounded-lg">
+    <div className="flex items-center justify-around bg-blue-500 w-full h-14 rounded-sm">
       <button
-        className="flex items-center justify-center w-10 h-10  rounded-full text-white bg-transparent "
+        className={`flex items-center justify-center w-10 h-10  rounded-full ${path === "/"?"text-yellow-300":"text-white"} hover:text-orange-500 text-white bg-transparent `}
         onClick={() => handleNavigation('/')}
       >
         {/* Home Icon */}
@@ -20,80 +20,30 @@ const Navbar = () => {
       </button>
 
       <button
-        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        className={`flex items-center justify-center w-10 h-10 rounded-full  ${path === "/education"?"text-yellow-300":"text-white"} text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out`}
         onClick={() => handleNavigation('/education')}
       >
         {/* Education Icon */}
-        <svg
-          className="text-white"
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth={0}
-          viewBox="0 0 1024 1024"
-         height="30px"
-          width="50px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M809.6 313.4l-358.4-108.4-358.4 108.4v208.4l358.4 108.4 358.4-108.4v-208.4zM512 527.8l-290.4-85.5 290.4-85.4 290.4 85.4-290.4 85.5z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
       </button>
 
       <button
-        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        className={`flex items-center justify-center w-10 h-10 rounded-full  ${path === "/skills"?"text-yellow-300":"text-white"} text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out`}
         onClick={() => handleNavigation('/skills')}
       >
         {/* Skills Icon */}
-        <svg
-          className="text-white"
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth={0}
-          viewBox="0 0 24 24"
-         height="30px"
-          width="50px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M12 2c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-table-of-contents"><path d="M16 12H3"/><path d="M16 18H3"/><path d="M16 6H3"/><path d="M21 12h.01"/><path d="M21 18h.01"/><path d="M21 6h.01"/></svg>
       </button>
 
       <button
-        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
+        className={`flex items-center justify-center w-10 h-10 rounded-full  ${path === "/projects"?"text-yellow-300":"text-white"} text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out`}
         onClick={() => handleNavigation('/projects')}
       >
         {/* Projects Icon */}
-        <svg
-          className="text-white"
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth={0}
-          viewBox="0 0 1024 1024"
-        height="30px"
-          width="50px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M238.7 296h546.7v50H238.7zM238.7 408.4h546.7v50H238.7zM238.7 520.8h546.7v50H238.7zM238.7 633.2h546.7v50H238.7z" />
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-folder-git-2"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v5"/><circle cx="13" cy="12" r="2"/><path d="M18 19c-2.8 0-5-2.2-5-5v8"/><circle cx="20" cy="19" r="2"/></svg>
       </button>
 
-      <button
-        className="flex items-center justify-center w-10 h-10 rounded-full text-white bg-transparent hover:transform hover:-translate-y-1 transition-transform ease-in-out"
-        onClick={() => handleNavigation('/contact')}
-      >
-        {/* Contact Icon */}
-        <svg
-          className="text-white"
-          stroke="currentColor"
-          fill="currentColor"
-          strokeWidth={0}
-          viewBox="0 0 24 24"
-         height="30px"
-          width="50px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M2 12h20m-4 4h4m-4-8h4M3 5h4m-4 14h4" />
-        </svg>
-      </button>
+     
     </div>
   );
 };
