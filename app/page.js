@@ -26,7 +26,7 @@ const Card = () => {
 
             className="flex  justify-center border-2 border-yellow-500 items-center gap-1 p-2  text-xs font-medium text-gray-300 rounded-lg "
           >
-            <span className="text-black font-bold text-[16px] ">Download Resume</span>
+            <span className="text-white font-bold text-[16px] ">Download Resume</span>
           </a>
 
         </div>
