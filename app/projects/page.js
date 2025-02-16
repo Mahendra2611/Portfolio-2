@@ -5,7 +5,7 @@ import Underline from "@/components/Underline";
 const Page = () => {
   return (
     <div className="p-4">
-         <h1 className="text-center pt-4 text-white font-bold font-lacquertext-3xl sm:text-6xl  ">
+         <h1 className="text-center pt-4 text-white font-bold font-lacquer text-3xl sm:text-6xl  ">
         <span className="text-orange-500">PRO</span>JECTS
       </h1>
      <Underline/>
