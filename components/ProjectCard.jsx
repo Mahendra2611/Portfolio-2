@@ -2,49 +2,71 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion"; 
 
 const ProjectCard = ({ name, imgLink, lang, githubLink, websiteLink }) => {
   const router = useRouter();
 
   const handleNavigation = (link) => {
-    if (link) {
-      router.push(link);
-    }
+    if (link) router.push(link);
   };
 
   return (
-    <div className="p-4 my-4 flex flex-col items-center mx-2 mx-w-[400px] border border-gray-700 rounded-lg">
-      {/* Project Image */}
-      <Image src={imgLink} alt={name} width={300} height={200} className="w-full" />
-      
-      {/* Project Name */}
-      <h2 className=" text-lime-500 text-2xl font-semibold mt-2">{name}</h2>
+    <motion.div
+      className="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl shadow-xl p-5 max-w-xs w-full transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+      initial={{ opacity: 0, y: 50 }} 
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+      whileHover={{ scale: 1.05 }} 
+    >
+      <div className="overflow-hidden rounded-xl">
+        <Image
+          src={imgLink}
+          alt={name}
+          width={300}
+          height={180}
+          className="rounded-xl object-cover hover:scale-110 transition-transform duration-300"
+        />
+      </div>
 
-      {/* Languages Used */}
-      <ul className="flex flex-wrap gap-2 mt-2">
-        {lang.map((data, index) => (
+      <motion.h2
+        className="text-center text-lime-400 text-2xl font-semibold mt-4"
+        whileHover={{ scale: 1.05 }} 
+        transition={{ duration: 0.3 }}
+      >
+        {name}
+      </motion.h2>
+
+      <ul className="flex flex-wrap justify-center gap-2 mt-3">
+        {lang.map((tech, index) => (
           <li
             key={index}
-            className="border-2 border-white/20 py-1 px-2 text-xs md:text-sm rounded-xl bg-[#4e6a99] shadow-lg"
+            className="bg-gradient-to-r from-purple-700 to-pink-600 text-white text-xs px-3 py-1 rounded-full shadow-md"
           >
-            {data}
+            {tech}
           </li>
         ))}
       </ul>
 
-      {/* Buttons */}
-      <div className="flex gap-4 mt-3">
-        {/* GitHub Button */}
-        <button onClick={() => handleNavigation(githubLink)} className="bg-gray-800 text-white px-4 py-2 rounded-md">
-          GitHub 
-        </button>
-
-        {/* Website Button */}
-        <button onClick={() => handleNavigation(websiteLink)} className="bg-blue-600 text-white px-4 py-2 rounded-md">
+      <div className="flex justify-center gap-4 mt-5">
+        <motion.button
+          onClick={() => handleNavigation(githubLink)}
+          className="bg-gradient-to-r from-gray-800 to-gray-600 hover:from-gray-700 hover:to-gray-500 px-4 py-2 text-white rounded-lg transition duration-300"
+          whileHover={{ scale: 1.1 }} 
+          whileTap={{ scale: 0.95 }} 
+        >
+          GitHub
+        </motion.button>
+        <motion.button
+          onClick={() => handleNavigation(websiteLink)}
+          className="bg-gradient-to-r from-blue-600 to-indigo-500 hover:from-blue-700 hover:to-indigo-600 px-4 py-2 text-white rounded-lg transition duration-300"
+          whileHover={{ scale: 1.1 }} 
+          whileTap={{ scale: 0.95 }} 
+        >
           Live Demo
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
