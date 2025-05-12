@@ -14,9 +14,14 @@ const Education = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
     >
-      <h1 className="text-center text-white text-3xl sm:text-6xl font-bold font-lacquer">
-        <span className="text-orange-500">EDU</span>CATION
-      </h1>
+      <motion.h1
+             className="text-center pt-6 text-4xl sm:text-6xl font-extrabold font-lacquer text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500"
+             initial={{ opacity: 0 }}
+             animate={{ opacity: 1 }}
+             transition={{ duration: 1 }}
+           >
+            EDUCATION
+           </motion.h1>
       <div className="flex justify-center mt-1">
         <Underline width="80" height="2" color="#FFA500" />
       </div>

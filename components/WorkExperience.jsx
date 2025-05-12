@@ -11,11 +11,16 @@ const WorkExperience = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.7 }}
     >
-      <h1 className="text-center text-white text-3xl sm:text-6xl mb-4 font-bold font-lacquer">
-        <span className="text-orange-500">WORK</span> EXPERIENCE
-      </h1>
+     <motion.h1
+                  className="text-center p-6 text-4xl sm:text-5xl font-extrabold font-lacquer text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1 }}
+                >
+                 WORK EXPERIENCE
+                </motion.h1>
       <motion.div
-        className="bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] sm:w-[600px] w-full rounded-lg p-6 shadow-xl text-white"
+        className=" text-center bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] sm:w-[600px] w-full rounded-lg p-6 shadow-xl text-white"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -36,17 +41,17 @@ const WorkExperience = () => {
         >
           Certificate Link
         </a>
-        <ul className="list-disc pl-5 mt-4 space-y-2 text-sm sm:text-base">
-          <li>
+        <div className="list-disc pl-5 mt-4 space-y-2 text-sm sm:text-base">
+          <p className="bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 p-4 rounded-xl border border-gray-700 shadow-md hover:shadow-yellow-400 transition duration-300">
             Developed dynamic, responsive web pages using Next.js, resulting in a 40% improvement in page load speed and a 30% increase in user engagement.
-          </li>
-          <li>
+          </p>
+          <p className="bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 p-4 rounded-xl border border-gray-700 shadow-md hover:shadow-yellow-400 transition duration-300">
             Improved user experience by implementing cross-browser compatibility and mobile responsiveness.
-          </li>
-          <li>
+          </p>
+          <p className="bg-gradient-to-br from-slate-800 via-gray-800 to-slate-900 p-4 rounded-xl border border-gray-700 shadow-md hover:shadow-yellow-400 transition duration-300">
             Integrated RESTful APIs and backend logic using Express.js. Collaborated to optimize performance and scalability.
-          </li>
-        </ul>
+          </p>
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -78,12 +78,12 @@ const Page = () => {
             },
             {
               label: "CodeChef Starters 183",
-              desc: "Secured a global rank of 17 (Division 2)",
+              desc: "Secured a global rank of 17 (Division 2).",
               url: null,
             },
             {
               label: "Leetcode Weekly Contest 443",
-              desc: "Secured global rank 362 out of 26,392 participants",
+              desc: "Secured a global rank of 362 out of 26,392 participants.",
               url: null,
             },
           ].map((item, idx) => (

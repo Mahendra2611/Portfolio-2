@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Card = ({ year, degree, collage }) => {
   return (
     <motion.div
-      className="flex flex-col items-center sm:w-[600px] w-full bg-[#031738] shadow-lg rounded-lg p-5 text-white transition-all duration-300 hover:scale-[1.05] hover:shadow-2xl hover:bg-gradient-to-r from-[#f6b93b] via-[#f39c12] to-[#e74c3c] cursor-pointer"
+      className="flex flex-col items-center sm:w-[600px] w-full bg-[#031738] shadow-lg rounded-lg p-5 text-white transition-all duration-300 hover:scale-[1.05] hover:shadow-2xl  cursor-pointer"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

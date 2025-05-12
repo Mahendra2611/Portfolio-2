@@ -1,7 +1,7 @@
 
 export const Edu = [
     {year:"2022-2026",
-            degree:"Bachelor of Technlogy",
+            degree:"Bachelor of Technology",
         collage:"Harcourt Butler Technical University",
         id:0
         },
