@@ -63,7 +63,7 @@ const Page = () => {
           {[
             {
               label: "Leetcode",
-              desc: "Knight (Max. Rating 2050)",
+              desc: "Knight (Max. Rating 2080)",
               url: "https://leetcode.com/u/mahendra_34/",
             },
             {

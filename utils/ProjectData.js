@@ -3,7 +3,7 @@ export const ProjectData = [
     img: "/assets/localmart-shopkeeper (1).png",
     name: "Localmart-Customer",
     lang: ["React Js", "Express Js", "Tailwind CSS", "Mongo DB","Socket.IO"],
-    weblink: "https://shopsy-customer.onrender.com/",
+    weblink: "https://localmart-customer.onrender.com/",
     gitlink: "https://github.com/Mahendra2611/Shopsy-Customer",
     
   },

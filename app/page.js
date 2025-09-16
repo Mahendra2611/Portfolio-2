@@ -64,7 +64,7 @@ const Card = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            I'm a 3rd year B.Tech Computer Science and Engineering student at
+            I'm a Final year B.Tech Computer Science and Engineering student at
             Harcourt Butler Technical University (HBTU) Kanpur with a strong passion for building full stack web
             applications. From crafting beautiful responsive UIs to building
             secure APIs and integrating real-time features, I thrive on turning
